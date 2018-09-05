@@ -70,6 +70,11 @@ class FirstViewController: UIViewController {
             let secondVC = segue.destination as! SecondViewController
             secondVC.arrLogChangeView = self.arrLogChangeView
         }
+        
+        if segue.identifier == "FirstToThird" {
+            let thirdVC = segue.destination as! ThirdViewController
+            thirdVC.arrLogChangeView = self.arrLogChangeView
+        }
     }
 
 }
