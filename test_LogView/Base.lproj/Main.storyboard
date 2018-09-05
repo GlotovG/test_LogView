@@ -1,24 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="test_LogView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RUD-O6-TuC">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ovg-P8-470">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Red" id="b26-1G-toB">
+                                        <barButtonItem key="rightBarButtonItem" title="ToYellow" id="7UN-U7-3xj">
+                                            <connections>
+                                                <segue destination="scP-0T-hfV" kind="show" identifier="FirstToSecond" id="IOT-70-C78"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RUD-O6-TuC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IBK-ic-ZvE"/>
+                            <constraint firstItem="RUD-O6-TuC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bh6-Ru-ADH"/>
+                            <constraint firstItem="RUD-O6-TuC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="ofN-qs-HR2"/>
+                            <constraint firstItem="RUD-O6-TuC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yTY-By-aJb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textViewRedView" destination="RUD-O6-TuC" id="wu6-oB-7LL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="wSq-7F-X21">
+            <objects>
+                <viewController id="scP-0T-hfV" customClass="SecondViewController" customModule="test_LogView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4YV-B7-Xol">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wNM-xL-5t6">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGX-zU-eNd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="5fD-BZ-fub">
+                                        <barButtonItem key="leftBarButtonItem" title="ToRed" id="MCq-oU-7cb">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="SecondToFirst" id="guQ-bk-vnd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="ToGreen" id="pqo-VZ-4ea">
+                                            <connections>
+                                                <segue destination="ahV-XR-oLT" kind="show" identifier="SecondToThird" id="UUy-MJ-8Yh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wNM-xL-5t6" firstAttribute="trailing" secondItem="UyS-JB-zLa" secondAttribute="trailing" id="FcL-Rf-VDZ"/>
+                            <constraint firstItem="wNM-xL-5t6" firstAttribute="bottom" secondItem="UyS-JB-zLa" secondAttribute="bottom" id="Jbk-Rj-qZq"/>
+                            <constraint firstItem="wNM-xL-5t6" firstAttribute="leading" secondItem="UyS-JB-zLa" secondAttribute="leading" id="PT7-eX-FMo"/>
+                            <constraint firstItem="wNM-xL-5t6" firstAttribute="top" secondItem="UyS-JB-zLa" secondAttribute="top" constant="24" id="s95-xu-W8D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UyS-JB-zLa"/>
+                    </view>
+                    <connections>
+                        <outlet property="textViewYellowView" destination="wNM-xL-5t6" id="SxF-o4-80I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNN-fW-0q2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="oP4-Fm-gU9">
+            <objects>
+                <viewController id="ahV-XR-oLT" customClass="ThirdViewController" customModule="test_LogView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FNd-1q-xa5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iw1-ct-VCz">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFu-Ri-hry">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="q7b-Lz-b5e">
+                                        <barButtonItem key="leftBarButtonItem" title="ToYellow" id="ACA-4g-5yk">
+                                            <connections>
+                                                <segue destination="scP-0T-hfV" kind="show" identifier="ThirdToSecond" id="k9D-ge-T3a"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="ToRed" id="xC2-Jd-JXP">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="ThirdToFirst" id="FXB-fd-3AS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iw1-ct-VCz" firstAttribute="leading" secondItem="Xct-Mz-amW" secondAttribute="leading" id="Aqg-8b-Zzc"/>
+                            <constraint firstItem="iw1-ct-VCz" firstAttribute="bottom" secondItem="Xct-Mz-amW" secondAttribute="bottom" id="HES-ba-m86"/>
+                            <constraint firstItem="iw1-ct-VCz" firstAttribute="trailing" secondItem="Xct-Mz-amW" secondAttribute="trailing" id="RI3-CV-H3A"/>
+                            <constraint firstItem="iw1-ct-VCz" firstAttribute="top" secondItem="Xct-Mz-amW" secondAttribute="top" constant="24" id="Zmh-oX-CKb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xct-Mz-amW"/>
+                    </view>
+                    <connections>
+                        <outlet property="textViewGreenView" destination="iw1-ct-VCz" id="mEI-B4-xCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MdR-xm-V5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2685.5999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="k9D-ge-T3a"/>
+        <segue reference="FXB-fd-3AS"/>
+    </inferredMetricsTieBreakers>
 </document>

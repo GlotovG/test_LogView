@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B2206A32213FB69D0085870D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2206A31213FB69D0085870D /* AppDelegate.swift */; };
-		B2206A34213FB69D0085870D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2206A33213FB69D0085870D /* ViewController.swift */; };
+		B2206A34213FB69D0085870D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2206A33213FB69D0085870D /* FirstViewController.swift */; };
 		B2206A37213FB69D0085870D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2206A35213FB69D0085870D /* Main.storyboard */; };
 		B2206A39213FB6A00085870D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2206A38213FB6A00085870D /* Assets.xcassets */; };
 		B2206A3C213FB6A00085870D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2206A3A213FB6A00085870D /* LaunchScreen.storyboard */; };
+		B2206A44213FBB0E0085870D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2206A43213FBB0E0085870D /* SecondViewController.swift */; };
+		B2206A46213FBB1D0085870D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2206A45213FBB1D0085870D /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B2206A2E213FB69D0085870D /* test_LogView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_LogView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2206A31213FB69D0085870D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2206A33213FB69D0085870D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2206A33213FB69D0085870D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		B2206A36213FB69D0085870D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2206A38213FB6A00085870D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2206A3B213FB6A00085870D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2206A3D213FB6A00085870D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2206A43213FBB0E0085870D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B2206A45213FBB1D0085870D /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				B2206A31213FB69D0085870D /* AppDelegate.swift */,
-				B2206A33213FB69D0085870D /* ViewController.swift */,
+				B2206A33213FB69D0085870D /* FirstViewController.swift */,
+				B2206A43213FBB0E0085870D /* SecondViewController.swift */,
+				B2206A45213FBB1D0085870D /* ThirdViewController.swift */,
 				B2206A35213FB69D0085870D /* Main.storyboard */,
 				B2206A38213FB6A00085870D /* Assets.xcassets */,
 				B2206A3A213FB6A00085870D /* LaunchScreen.storyboard */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2206A34213FB69D0085870D /* ViewController.swift in Sources */,
+				B2206A44213FBB0E0085870D /* SecondViewController.swift in Sources */,
+				B2206A34213FB69D0085870D /* FirstViewController.swift in Sources */,
+				B2206A46213FBB1D0085870D /* ThirdViewController.swift in Sources */,
 				B2206A32213FB69D0085870D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gennadiyglotov.test-LogView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gennadiyglotov.test-LogView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
